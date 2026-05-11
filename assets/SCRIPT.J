@@ -6,9 +6,12 @@ const perHalaman = 10;
 fetch("data/katalog.json")
   .then(res => res.json())
   .then(data => {
+
     semuaData = data;
     dataAktif = data;
+
     tampilkan();
+
   });
 
 function tampilkan(){
@@ -22,7 +25,7 @@ function tampilkan(){
   const dataTampil = dataAktif.slice(start, end);
 
   dataTampil.forEach(item => {
-
+const isPopuler = item.kategori === "populer";
     const pesan = `Halo kak 👋
 Saya mau pesan undangan
 
@@ -31,33 +34,53 @@ Saya mau pesan undangan
 
     const linkWA = `https://wa.me/${nomorWA}?text=${encodeURIComponent(pesan)}`;
 
-    katalog.innerHTML += `
-      <div class="bg-white rounded-2xl shadow-sm hover:shadow-2xl transition duration-300 hover:-translate-y-2 overflow-hidden text-sm group border border-white/40 backdrop-blur">
+  katalog.innerHTML += `
 
-        <div class="relative group">
-          <img src="${item.gambar}" class="w-full aspect-[3/4] sm:aspect-[4/5] object-cover transition duration-500 group-hover:scale-105">
+  <div class="relative">
 
-          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center gap-2">
+    ${isPopuler ? `
+      <div class="absolute top-3 right-3 z-20
+        bg-gradient-to-r from-orange-500 to-red-500
+        text-white text-[10px] sm:text-xs
+        px-3 py-1 rounded-full
+        animate-pulse shadow-lg">
 
-            <a href="${item.link}" target="_blank"
-            class="bg-white/90 px-3 py-1.5 rounded-full text-xs sm:text-sm font-semibold">
-              Preview
-            </a>
+        🔥 POPULER
 
-            <a href="${linkWA}" target="_blank"
-            class="bg-green-500 text-white px-3 py-1.5 rounded-full text-xs sm:text-sm font-semibold">
-              Order
-            </a>
+      </div>
+    ` : ""}
 
-          </div>
-        </div>
+    <div class="bg-white rounded-2xl shadow-sm hover:shadow-2xl transition duration-300 hover:-translate-y-2 overflow-hidden text-sm group border border-white/40 backdrop-blur">
 
-        <div class="p-3 text-center text-sm sm:text-base font-semibold">
-          ${item.nama}
+      <div class="relative group">
+
+        <img src="${item.gambar}"
+          class="w-full aspect-[3/4] sm:aspect-[4/5] object-cover transition duration-500 group-hover:scale-105">
+
+        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center gap-2">
+
+          <a href="${item.link}" target="_blank"
+          class="bg-white/90 px-3 py-1.5 rounded-full text-xs sm:text-sm font-semibold">
+            Preview
+          </a>
+
+          <a href="${linkWA}" target="_blank"
+          class="bg-green-500 text-white px-3 py-1.5 rounded-full text-xs sm:text-sm font-semibold">
+            Order
+          </a>
+
         </div>
 
       </div>
-    `;
+
+      <div class="p-3 text-center text-sm sm:text-base font-semibold">
+        ${item.nama}
+      </div>
+
+    </div>
+
+  </div>
+`;
   });
 
   renderPagination();
