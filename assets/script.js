@@ -26,7 +26,7 @@ function tampilkan(){
   const dataTampil = dataAktif.slice(start, end);
 
   dataTampil.forEach(item => {
-
+const isPopuler = item.kategori === "populer";
     const pesan = `Halo kak 👋
 Saya mau pesan undangan
 
