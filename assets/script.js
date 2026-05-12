@@ -16,43 +16,38 @@ fetch("data/katalog.json")
        SEARCH FLEXIBLE
     ========================= */
 
-    const searchInput = document.getElementById("search");
+    const inputCari = document.getElementById("searchInput");
 
-    searchInput.addEventListener("input", function(){
+inputCari.addEventListener("input", function () {
 
-      const keyword = this.value.toLowerCase().trim();
+  const keyword = this.value.toLowerCase().trim();
 
-      halaman = 1;
+  halaman = 1;
 
-      // kalau kosong
-      if(keyword === ""){
-        dataAktif = semuaData;
-        tampilkan();
-        return;
-      }
+  dataAktif = semuaData.filter(item => {
 
-      // pecah kata
-      const kataCari = keyword.split(" ");
+    // PRIORITAS NAMA
+    const namaMatch =
+      item.nama.toLowerCase().includes(keyword);
 
-      dataAktif = semuaData.filter(item => {
+    // KEYWORD
+    const keywordMatch =
+      item.keyword &&
+      item.keyword.some(k =>
+        k.toLowerCase().includes(keyword)
+      );
 
-        // gabungkan semua text
-        const gabung = `
-          ${item.nama || ""}
-          ${item.kategori || ""}
-          ${(item.keyword || []).join(" ")}
-        `.toLowerCase();
+    // KATEGORI
+    const kategoriMatch =
+      item.kategori.toLowerCase().includes(keyword);
 
-        // flexible search
-        return kataCari.some(kata => 
-          gabung.includes(kata)
-        );
+    return namaMatch || keywordMatch || kategoriMatch;
 
-      });
+  });
 
-      tampilkan();
+  tampilkan();
 
-    });
+});
 
   });
 
