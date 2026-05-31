@@ -269,40 +269,81 @@ fetch("data/porto.json")
 
     const porto = document.getElementById("portoList");
 
-    if(!porto) return;
+    if (!porto) return;
 
-    porto.innerHTML = "";
+    const perPage = window.innerWidth < 768 ? 8 : 12;
+    let currentPage = 1;
+    const totalPages = Math.ceil(data.length / perPage);
 
-    data.forEach(item => {
+    function renderPage(page) {
 
-      porto.innerHTML += `
-      
-      <div class="group">
+      porto.innerHTML = "";
 
-  <a href="${item.link}" target="_blank">
+      const start = (page - 1) * perPage;
+      const end = start + perPage;
 
-    <!-- FOTO -->
-    <div class="overflow-hidden rounded-2xl">
+      data.slice(start, end).forEach(item => {
 
-      <img 
-        src="${item.gambar}" 
-        alt="${item.nama}"
-        class="w-full aspect-square object-cover transition duration-500 group-hover:scale-105"
-      >
+        porto.innerHTML += `
+          <div class="group">
+            <a href="${item.link}" target="_blank">
 
-    </div>
+              <div class="overflow-hidden rounded-2xl">
+                <img
+                  src="${item.gambar}"
+                  alt="${item.nama}"
+                  class="w-full aspect-square object-cover transition duration-500 group-hover:scale-105"
+                >
+              </div>
 
-   <!-- NAMA -->
-<div class="mt-2 text-center text-xs md:text-sm font-semibold leading-tight line-clamp-2 min-h-[38px]">
-  ${item.nama.replace(" Of ", " Of <br>")}
-</div>
+              <div class="mt-2 text-center text-xs md:text-sm font-semibold leading-tight line-clamp-2 min-h-[38px]">
+                ${item.nama.replace(" Of ", " Of <br>")}
+              </div>
 
-  </a>
+            </a>
+          </div>
+        `;
+      });
 
-</div>
+      document.getElementById("pageInfo").textContent =
+        `${page} / ${totalPages}`;
 
-      `;
+      document.getElementById("prevPorto").disabled = page === 1;
+      document.getElementById("nextPorto").disabled = page === totalPages;
 
+      document.getElementById("prevPorto").classList.toggle(
+        "opacity-40",
+        page === 1
+      );
+
+      document.getElementById("nextPorto").classList.toggle(
+        "opacity-40",
+        page === totalPages
+      );
+    }
+
+    renderPage(currentPage);
+
+    document.getElementById("nextPorto").addEventListener("click", () => {
+      if (currentPage < totalPages) {
+        currentPage++;
+        renderPage(currentPage);
+
+        document
+          .getElementById("porto")
+          .scrollIntoView({ behavior: "smooth" });
+      }
+    });
+
+    document.getElementById("prevPorto").addEventListener("click", () => {
+      if (currentPage > 1) {
+        currentPage--;
+        renderPage(currentPage);
+
+        document
+          .getElementById("porto")
+          .scrollIntoView({ behavior: "smooth" });
+      }
     });
 
   });
