@@ -592,52 +592,103 @@ class="grid !grid-cols-2 lg:!grid-cols-5 gap-4 scroll-mt-36">
 <div class="grid md:grid-cols-3 gap-8 items-stretch">
 
   <!-- BASIC -->
-  <div class="paket-card white-card p-8">
-    <div class="mb-8">
+<div class="relative rounded-[32px] bg-white border border-gray-200 shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all duration-300 overflow-hidden flex flex-col">
 
-      <span class="text-sm text-gray-500 font-medium">
-        Paket Hemat
+  <!-- Ribbon -->
+  <div class="absolute top-5 -right-10 rotate-45 bg-gradient-to-r from-yellow-400 to-yellow-300 text-black text-[11px] font-bold px-10 py-1 shadow">
+    HEMAT
+  </div>
+
+  <div class="p-8 flex flex-col h-full">
+
+    <!-- Icon -->
+    <div class="w-16 h-16 rounded-2xl bg-yellow-100 flex items-center justify-center text-3xl mb-6">
+      📄
+    </div>
+
+    <!-- Judul -->
+    <span class="text-sm font-medium text-gray-500">
+      Paket Hemat
+    </span>
+
+    <h3 class="text-3xl font-bold mt-2">
+      Basic
+    </h3>
+
+    <!-- Harga -->
+    <div class="mt-5 mb-6">
+
+      <span class="text-gray-400 line-through text-lg">
+        Rp150.000
       </span>
 
-      <h3 class="text-3xl font-bold mt-2 mb-3">
-        Basic
-      </h3>
+      <div class="flex items-end gap-2 mt-1">
 
-      <div class="flex items-center gap-3">
-
-        <span class="text-gray-400 line-through text-lg">
-          Rp150.000
-        </span>
-
-        <span class="text-5xl font-extrabold tracking-tight">
+        <span class="text-5xl font-extrabold tracking-tight text-gray-900">
           Rp59K
         </span>
 
       </div>
 
+      <p class="text-sm text-gray-500 mt-2">
+        Sekali bayar • Tanpa biaya bulanan
+      </p>
+
     </div>
 
-    <ul class="space-y-4 text-gray-600 mb-10">
+    <!-- Fitur -->
+    <div class="border-t pt-5">
 
-      <li>✔ Max 5x Revisi</li>
-      <li>✔ Unlimited Tamu</li>
-      <li>✔ Musik Latar</li>
-      <li>✔ Google Maps</li>
-      <li>✔ RSVP & Ucapan</li>
-      <li>✔ Amplop Digital</li>
-      <li>✔ Tanpa Foto</li>
+      <h4 class="text-xs font-bold tracking-widest text-yellow-600 uppercase mb-4">
+        Fitur Utama
+      </h4>
 
-    </ul>
+      <ul class="space-y-3 text-gray-700">
 
-    <a href="https://wa.me/6281261233730?text=Saya+mau+paket+Basic"
-      target="_blank"
-      class="block text-center py-4 rounded-2xl border border-black font-semibold hover:bg-black hover:text-white hover:scale-105 transition-all duration-300">
+        <li>✅ Unlimited Tamu</li>
+        <li>✅ Musik Latar</li>
+        <li>✅ Google Maps</li>
+        <li>✅ RSVP & Ucapan</li>
+        <li>✅ Amplop Digital</li>
+        <li>✅ Tanpa Foto</li>
 
-      Pilih Paket Basic
+      </ul>
 
-    </a>
+    </div>
+
+    <!-- Bonus -->
+    <div class="border-t mt-6 pt-5">
+
+      <h4 class="text-xs font-bold tracking-widest text-yellow-600 uppercase mb-4">
+        Bonus
+      </h4>
+
+      <ul class="space-y-3 text-gray-700">
+
+        <li>🎁 Max. 5x Revisi</li>
+        <li>🎁 Gratis Konsultasi</li>
+        <li>🎁 Support via WhatsApp</li>
+
+      </ul>
+
+    </div>
+
+    <!-- Tombol -->
+    <div class="mt-auto pt-8">
+
+      <a href="https://wa.me/6281261233730?text=Saya+mau+paket+Basic"
+        target="_blank"
+        class="block text-center py-4 rounded-2xl font-bold text-black bg-gradient-to-r from-yellow-400 to-yellow-300 hover:from-yellow-300 hover:to-yellow-400 hover:scale-[1.03] transition-all duration-300 shadow-lg">
+
+        Pilih Paket Basic
+
+      </a>
+
+    </div>
 
   </div>
+
+</div>
 
   <!-- PREMIUM -->
   <div class="rounded-[32px] bg-black text-white p-8 md:scale-110 shadow-[0_20px_70px_rgba(0,0,0,0.35)] relative overflow-hidden border border-yellow-400/30">
