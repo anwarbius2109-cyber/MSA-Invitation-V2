@@ -8,7 +8,7 @@
   <meta property="og:title" content="MSA Invitation" />
   
   <meta property="og:description" 
-  content="Pilih tema undangan digital elegan & modern. Bisa custom sesuai keinginan kamu 💌" />
+  content="Pilih tema undangan digital elegan & modern. Proses Expres hasil maksimal 💌" />
   
   <meta property="og:image" 
   content="https://msa-invitation-id.vercel.app/assets/MSA H.png" />
@@ -861,226 +861,244 @@ class="grid !grid-cols-2 lg:!grid-cols-5 gap-4 scroll-mt-36">
 
   </div>
 
-</section>   
+</section> <!-- tutup testimoni -->
+
 <section id="porto" class="max-w-6xl mx-auto px-4 py-16" data-aos="fade-up">
 
   <h2 class="text-2xl font-bold text-center mb-10">
     Portfolio Kami
   </h2>
 
-   <p class="text-center max-w-2xl mx-auto mb-10 opacity-80">
-      Hasil Undangan Digital Yang Kami Buat Dengan Sepenuh Hati
-    </p>
-      
+  <p class="text-center max-w-2xl mx-auto mb-10 opacity-80">
+    Hasil Undangan Digital Yang Kami Buat Dengan Sepenuh Hati
+  </p>
+
   <div id="portoList" class="porto-grid"></div>
+
+  <div class="flex justify-center items-center gap-3 mt-8">
+    
+    <button id="prevPorto"
+      class="px-4 py-2 rounded-full border hover:bg-gray-100 transition">
+      ← Prev
+    </button>
+
+    <span id="pageInfo" class="text-sm font-medium"></span>
+
+    <button id="nextPorto"
+      class="px-4 py-2 rounded-full border hover:bg-gray-100 transition">
+      Next →
+    </button>
+
+  </div>
+
+</section>
   
 <!-- SECTION SHOPEE -->
-<section class="py-20">
-  <div class="max-w-6xl mx-auto px-6">
+<section class="py-20" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto px-6">
 
-    <!-- Card -->
-    <div class="rounded-[32px] bg-[#0F0F0F] border border-white/10 p-8 md:p-12 hover:-translate-y-3 hover:shadow-[0_20px_60px_rgba(0,0,0,0.35)] transition-all duration-500">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
 
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-
-        <!-- Foto -->
-        <div class="relative">
-          <img 
-            src="assets/MSA.COM.png"
-            alt="Shopee Store"
-            class="rounded-[24px] border border-white/10 shadow-2xl w-full"
-          />
-        </div>
-
-        <!-- Content -->
-        <div>
-
-          <!-- Label -->
-          <span class="text-sm text-orange-400 font-medium">
-            Order Lebih Aman
-          </span>
-
-          <!-- Title -->
-          <h2 class="text-3xl md:text-5xl font-bold text-white mt-3 mb-5 leading-tight">
-            Masih Ragu Order di Kami?
-          </h2>
-
-          <!-- Description -->
-          <p class="text-gray-300 leading-relaxed mb-8">
-            Kakak juga bisa melakukan pemesanan melalui toko Shopee resmi kami ✨
-            Lebih praktis, terpercaya, dan tersedia banyak ulasan dari pelanggan.
-          </p>
-
-          <!-- List -->
-          <div class="space-y-4 mb-8">
-
-            <div class="flex items-center gap-3">
-              <div class="w-6 h-6 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-400 text-sm">
-                ✓
-              </div>
-
-              <p class="text-gray-200">
-                Sudah dipercaya banyak pelanggan
-              </p>
+            <!-- Gambar -->
+            <div class="order-1">
+                <img src="assets/MSA.COM.png"
+                    alt="MSA Invitation Shopee"
+                    class="w-full max-w-md mx-auto drop-shadow-2xl hover:scale-105 transition duration-500">
             </div>
 
-            <div class="flex items-center gap-3">
-              <div class="w-6 h-6 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-400 text-sm">
-                ✓
-              </div>
+            <!-- Konten -->
+            <div class="order-2">
 
-              <p class="text-gray-200">
-                Bisa cek rating dan ulasan toko langsung
-              </p>
+                <span class="inline-block px-4 py-2 rounded-full bg-orange-100 text-orange-600 text-sm font-semibold mb-4">
+                    Official Shopee Store
+                </span>
+
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">
+                    Belanja Lebih Aman di Shopee
+                </h2>
+
+                <p class="text-gray-600 leading-8 mb-6">
+                    Kini Anda juga bisa melakukan pemesanan melalui <b>Shopee Official Store</b>.
+                    Nikmati proses belanja yang lebih praktis, aman, serta dapat melihat rating dan ulasan pelanggan sebelum melakukan pembelian.
+                </p>
+
+                <div class="space-y-3 mb-8">
+
+                    <div class="flex items-center gap-3">
+                        <span class="text-orange-500 text-xl">✓</span>
+                        <span class="text-gray-700">Banyak ulasan pelanggan</span>
+                    </div>
+
+                    <div class="flex items-center gap-3">
+                        <span class="text-orange-500 text-xl">✓</span>
+                        <span class="text-gray-700">Pembayaran lebih aman</span>
+                    </div>
+
+                    <div class="flex items-center gap-3">
+                        <span class="text-orange-500 text-xl">✓</span>
+                        <span class="text-gray-700">Proses cepat & terpercaya</span>
+                    </div>
+
+                </div>
+
+                <a href="https://shopee.co.id/product/99830023/15789569960/"
+                    target="_blank"
+                    class="inline-flex items-center gap-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-4 rounded-xl shadow-lg transition hover:scale-105">
+
+                    🛒 Kunjungi Toko Shopee
+
+                </a>
+
             </div>
-
-            <div class="flex items-center gap-3">
-              <div class="w-6 h-6 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-400 text-sm">
-                ✓
-              </div>
-
-              <p class="text-gray-200">
-                Pembayaran lebih praktis dan aman
-              </p>
-            </div>
-
-          </div>
-
-          <!-- Button -->
-          <a 
-            href="https://shopee.co.id/product/99830023/41450563672/"
-            target="_blank"
-            class="inline-flex items-center gap-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-4 rounded-2xl transition-all duration-300 hover:scale-105"
-          >
-
-            <!-- Icon -->
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M19 6h-2a5 5 0 0 0-10 0H5a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2Zm-7-3a3 3 0 0 1 3 3H9a3 3 0 0 1 3-3Zm7 16H5V8h14v11Z"/>
-            </svg>
-
-            Kunjungi Toko Shopee
-
-          </a>
 
         </div>
-
-      </div>
 
     </div>
-
-  </div>
 </section>
-  <!-- RESELLER -->
-<section id="reseller" class="py-20" data-aos="fade-up">
+  
+ <!-- Produk Tambahan - Agen Pulsa -->
+<section class="py-20 bg-white" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto px-4">
 
-  <div class="max-w-6xl mx-auto px-4">
+        <div class="grid lg:grid-cols-2 gap-10 items-center">
 
-    <div class="rounded-3xl bg-gradient-to-br from-black to-gray-800 text-white p-8 md:p-14 overflow-hidden relative">
-
-      <!-- GLOW -->
-      <div class="absolute top-[-100px] right-[-100px] w-[250px] h-[250px] bg-yellow-400/20 blur-3xl rounded-full"></div>
-
-      <div class="relative z-10">
-
-        <!-- TITLE -->
-        <div class="text-center mb-12">
-
-          <span class="px-4 py-2 rounded-full bg-white/10 border border-white/20 text-sm">
-            Program Reseller
-          </span>
-
-          <h2 class="text-3xl md:text-5xl font-bold mt-6 mb-4 leading-tight">
-
-            Join Reseller
-            <br>
-            MSA Invitation ✨
-
-          </h2>
-
-          <p class="text-gray-300 max-w-3xl mx-auto leading-relaxed">
-
-            Mulai bisnis undangan digital tanpa perlu bisa coding atau desain.
-            Cocok untuk pelajar, freelancer, admin wedding, maupun yang ingin
-            menambah penghasilan dari rumah.
-
-          </p>
-
-        </div>
-
-        <!-- BENEFIT -->
-        <div class="grid md:grid-cols-3 gap-6 mb-12">
-
-          <!-- 1 -->
-          <div class="rounded-2xl bg-white/5 border border-white/10 p-6 backdrop-blur">
-
-            <div class="text-3xl mb-4">
-              💰
+            <!-- Gambar -->
+            <div class="order-1">
+                <img src="assets/Agen Pulsa.jpeg"
+                    alt="CPS Reload"
+                    class="w-full max-w-md mx-auto rounded-3xl shadow-2xl">
             </div>
 
-            <h3 class="text-xl font-semibold mb-2">
-              Profit Menarik
-            </h3>
+            <!-- Konten -->
+            <div class="order-2">
 
-            <p class="text-gray-300 text-sm leading-relaxed">
-              Ambil keuntungan sendiri dari setiap penjualan undangan digital.
-            </p>
+                <span class="inline-block px-4 py-2 rounded-full bg-blue-100 text-blue-700 text-sm font-semibold mb-4">
+                    Produk Tambahan
+                </span>
 
-          </div>
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">
+                    Jadi Agen Pulsa & PPOB
+                </h2>
 
-          <!-- 2 -->
-          <div class="rounded-2xl bg-white/5 border border-white/10 p-6 backdrop-blur">
+                <p class="text-gray-600 leading-8 mb-6">
+                    Tambah penghasilan dengan menjadi <strong>Agen CPS Reload</strong>.
+                    Nikmati layanan Pulsa, Paket Data, Token PLN, Top Up E-Wallet,
+                    Voucher Game, hingga pembayaran tagihan dalam satu aplikasi.
+                </p>
 
-            <div class="text-3xl mb-4">
-              ⚡
+                <div class="grid grid-cols-2 gap-3 mb-8">
+
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-check-circle text-blue-500"></i>
+                        <span>Modal Kecil</span>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-check-circle text-blue-500"></i>
+                        <span>Transaksi 24 Jam</span>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-check-circle text-blue-500"></i>
+                        <span>Harga Bersaing</span>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-check-circle text-blue-500"></i>
+                        <span>Support CS</span>
+                    </div>
+
+                </div>
+
+                <div class="bg-blue-50 border border-blue-200 rounded-2xl p-5 mb-8">
+
+                    <p class="text-sm text-gray-500 mb-1">
+                        Gunakan Kode Referral
+                    </p>
+
+                    <h3 class="text-4xl font-extrabold text-blue-600">
+                        MSA02
+                    </h3>
+
+                </div>
+
+                <a href="https://wa.me/6281261233730?text=Halo%20Admin,%20saya%20ingin%20mendaftar%20menjadi%20Agen%20CPS%20Reload.%20Kode%20Referral%20MSA02"
+                    target="_blank"
+                    class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-xl shadow-lg transition duration-300">
+
+                    <i class="fas fa-user-plus"></i>
+                    Daftar Jadi Agen
+
+                </a>
+
             </div>
 
-            <h3 class="text-xl font-semibold mb-2">
-              Proses Cepat 1x24 Jam
-            </h3>
-
-            <p class="text-gray-300 text-sm leading-relaxed">
-              Tim kami membantu proses pengerjaan sehingga kamu tinggal fokus jualan.
-            </p>
-
-          </div>
-
-          <!-- 3 -->
-          <div class="rounded-2xl bg-white/5 border border-white/10 p-6 backdrop-blur">
-
-            <div class="text-3xl mb-4">
-              🎨
-            </div>
-
-            <h3 class="text-xl font-semibold mb-2">
-              150+ Tema Premium
-            </h3>
-
-            <p class="text-gray-300 text-sm leading-relaxed">
-              Banyak pilihan tema elegan dan modern siap dipasarkan kembali.
-            </p>
-
-          </div>
-
         </div>
-
-        <!-- CTA -->
-        <div class="text-center">
-
-          <a href="https://wa.me/6281261233730?text=Halo+saya+ingin+join+reseller"
-            target="_blank"
-            class="inline-block px-8 py-4 rounded-full bg-white text-black font-semibold hover:scale-105 transition">
-
-            Gabung Reseller Sekarang
-
-          </a>
-
-        </div>
-
-      </div>
 
     </div>
+</section>
+  
+<!-- RESELLER -->
+<section id="reseller" class="py-20" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto px-6">
 
-  </div>
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+            <!-- Gambar -->
+            <div class="order-1">
+                <img src="assets/Open Reseler.png"
+                    alt="Join Reseller"
+                    class="w-full max-w-md mx-auto drop-shadow-2xl hover:scale-105 transition duration-500">
+            </div>
+
+            <!-- Konten -->
+            <div class="order-2">
+
+                <span class="inline-block px-4 py-2 rounded-full bg-emerald-100 text-emerald-600 text-sm font-semibold mb-4">
+                    Program Reseller
+                </span>
+
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">
+                    Bangun Bisnis Undangan Website
+                </h2>
+
+                <p class="text-gray-600 leading-8 mb-6">
+                    Mulai bisnis <b>Undangan Website Digital</b> dengan brand Anda sendiri tanpa perlu bisa coding atau desain. Kami yang mengerjakan, Anda cukup fokus memasarkan dan mendapatkan keuntungan.
+                </p>
+
+                <div class="space-y-3 mb-8">
+
+                    <div class="flex items-center gap-3">
+                        <span class="text-emerald-500 text-xl">✓</span>
+                        <span class="text-gray-700">Profit menarik setiap order</span>
+                    </div>
+
+                    <div class="flex items-center gap-3">
+                        <span class="text-emerald-500 text-xl">✓</span>
+                        <span class="text-gray-700">150+ tema premium siap jual</span>
+                    </div>
+
+                    <div class="flex items-center gap-3">
+                        <span class="text-emerald-500 text-xl">✓</span>
+                        <span class="text-gray-700">Pengerjaan cepat & support penuh</span>
+                    </div>
+
+                </div>
+
+                <a href="https://wa.me/6281261233730?text=Halo%20Admin,%20saya%20ingin%20bergabung%20menjadi%20Reseller%20MSA%20Invitation."
+                    target="_blank"
+                    class="inline-flex items-center gap-3 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-8 py-4 rounded-xl shadow-lg transition hover:scale-105">
+
+                    🤝 Gabung Reseller
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
 
 </section>
 <!-- 🔥 FOOTER TARUH DI SINI -->
